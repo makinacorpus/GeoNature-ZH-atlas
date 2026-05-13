@@ -237,10 +237,10 @@ dependencies:
 ---
 ```
 
-Afin d'avoir les zones humides à jour, il est possible sur le serveur de rajouter une crontab pour re-générer le fichier pbf :
+Afin d'avoir les zones humides à jour, une tâche automatisée peut être mise en place sur le serveur pour régénérer le fichier PBF (par exemple avec crontab ou systemd) :
 
 ```sh
-wget API_ENDPOINT/zones_humides/pbf/complete -O PATH_TO_GEONATURE_DIR/public/geonature.pbf
+wget API_ENDPOINT/zones_humides/pbf/complete -O PATH_TO_ZH_ATLAS_DIR/public/geonature.pbf
 ```
 
 ##### PDF

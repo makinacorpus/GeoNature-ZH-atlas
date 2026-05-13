@@ -6,7 +6,7 @@ export const pbfToGeojson = (pbfData) => {
     const geojson = geobuf.decode(pbf);
 
     geojson.features.forEach(element => {
-        element.properties.bassin_versant = JSON.parse(element?.properties?.json_arrays ?? {})["bassin_versant"] ?? [null];
+        element.properties.bassin_versant = JSON.parse(element?.properties?.json_arrays ?? "{}") ["bassin_versant"] ?? [null];
         element.properties.communes = JSON.parse(element?.properties?.json_arrays ?? {})["communes"] ?? [null];
         element.properties.criteres_delim = JSON.parse(element?.properties?.json_arrays ?? {})["criteres_delim"] ?? [null];
     });
